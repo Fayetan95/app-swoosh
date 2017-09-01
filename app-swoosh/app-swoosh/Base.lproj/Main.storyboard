@@ -53,6 +53,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jvd-S2-cPO" kind="show" id="Ozj-9a-pYD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-K7-WIb">
                                 <rect key="frame" x="58" y="217" width="267" height="44"/>
@@ -92,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+            <point key="canvasLocation" x="71" y="116"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="i53-hw-EMB">
@@ -165,15 +168,23 @@
                                 <rect key="frame" x="16" y="597" width="343" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.4043771404" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="5kR-sS-ved"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="NKR-i6-cdR"/>
                                     <constraint firstAttribute="height" constant="50" id="ZuF-sw-SNQ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gwd-H6-d5C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndA-sG-3hQ">
+                                <rect key="frame" x="16" y="30" width="44" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="9h0-Uq-SJe"/>
+                                    <constraint firstAttribute="height" constant="33" id="KA3-1m-r6J"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="U99-R0-Pxo" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="fny-dR-Yvd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,7 +196,9 @@
                             <constraint firstItem="7Rs-cp-rih" firstAttribute="bottom" secondItem="xxY-rD-Shq" secondAttribute="bottom" id="EaG-wx-yxa"/>
                             <constraint firstItem="7Rs-cp-rih" firstAttribute="top" secondItem="sQp-lP-T9V" secondAttribute="top" id="MoX-cW-NMM"/>
                             <constraint firstItem="qan-nd-1Mo" firstAttribute="leading" secondItem="xxY-rD-Shq" secondAttribute="leading" constant="16" id="UbT-KR-XdP"/>
+                            <constraint firstItem="ndA-sG-3hQ" firstAttribute="leading" secondItem="xxY-rD-Shq" secondAttribute="leading" constant="16" id="Vz1-vJ-hcS"/>
                             <constraint firstItem="ta6-VY-4sL" firstAttribute="leading" secondItem="xxY-rD-Shq" secondAttribute="leading" constant="16" id="Ywq-sA-JYJ"/>
+                            <constraint firstItem="ndA-sG-3hQ" firstAttribute="top" secondItem="xxY-rD-Shq" secondAttribute="top" constant="10" id="afc-r5-8SN"/>
                             <constraint firstItem="7Rs-cp-rih" firstAttribute="leading" secondItem="xxY-rD-Shq" secondAttribute="leading" id="bam-Fk-zHU"/>
                             <constraint firstItem="aYa-SG-1OQ" firstAttribute="leading" secondItem="xxY-rD-Shq" secondAttribute="leading" constant="16" id="eoI-Tz-SV6"/>
                             <constraint firstItem="xxY-rD-Shq" firstAttribute="trailing" secondItem="qan-nd-1Mo" secondAttribute="trailing" constant="16" id="oiF-po-R4M"/>
@@ -196,8 +209,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMQ-0G-K6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="U99-R0-Pxo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="762" y="117"/>
+            <point key="canvasLocation" x="804" y="115.59220389805098"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4VJ-8h-OII">
@@ -287,10 +301,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Weo-jv-bvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="117"/>
+            <point key="canvasLocation" x="1527" y="116"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
